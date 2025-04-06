@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #b3e3ff;
+    color: #333;
+  }
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #8fc9ff;
+    font-weight: bold;
+    font-size: large;
+  }
+
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
