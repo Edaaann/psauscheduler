@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Scheduler</title>
-    <link rel="stylesheet" href="Website.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <header>  
+    <header>   
     <div>College of Information Technology</div>
-    <div>
-        <button>Home</button>
-        <button>Favorite</button>
-        <button>Notifications</button>
-        <div>
-            <button>Sign In</button>
+    <div class="icons">
+        <button class="Home"><i class="fa fa-home"></i></button>
+        <button class="Favorite"><i class="fa fa-star"></i></button>
+        <button class="Notifications"><i class="fa fa-bell"></i></button>
+        <div class="account">
+            <button class="Sign">Sign In</button>
+            <button class="Log">Log In</button>
         </div>
     </div>
     </header>
 
-    <div class="search">
-        <p>Search by:</p>
-        <select>
+    <div class="engine">
+        <p id="by">Search By:</p>
+        <select id="options">
             <option>Professor Name</option>
             <option>Subject</option>
             <option>Year</option>
           </select>
-        <textarea placeholder="Type here." name="Your Business"></textarea>
-        <button>Search</button>
+        <textarea placeholder=" Type here." name="Your Business"></textarea>
+        <button id="Search">Search</button>
     </div>
-
 
     <selection>
     <div>
@@ -37,18 +39,15 @@
         <p>View list of faculty members</p>
     </div>
 
-
     <div>
         <h3>Subjects List</h3>
         <p>Browse subjects by semester</p>
     </div>
 
-
     <div>
         <h3>School Calendar</h3>
         <p>View upcoming school events</p>
     </div>
-
 
     <div>
         <h3>Request Form</h3>
@@ -56,13 +55,10 @@
     </div>
     </selection>
 
-
     <div>
         <p>Need help?</p>
         <p>FAQs</p>
     </div>
-  
-
 
     <script src="script.js"></script>
 </body>
