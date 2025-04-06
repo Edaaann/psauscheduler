@@ -2,11 +2,11 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #b3e3ff;
-    color: #333;
+    color: #020202;
   }
 
-
 header {
+    font-family: Georgia, serif;;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,11 +16,82 @@ header {
     font-size: large;
   }
 
+.icons {
+  display: flex;
+  align-items: center;
+}
 
-.search {
+.Home {
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+.Favorite{
+  font-size: 23px;
+  background: none;
+  border: none;
+}
+
+.Notifications {
+  font-size: 20px;
+  background: none;
+  border: none;
+}
+
+.Home, .Favorite, .Notifications, .Sign {
+  margin: 3px;
+  padding: 3px;
+}
+
+.account {
+  display: flex;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.Sign {
+  border: 0%;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.engine {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5px;
+  padding: 5px;
 }
 
+#by {
+  margin: 5px;
+  color: grey;
+  font-size: smaller;
+}
 
+#options {
+  size: 5px;
+  border-radius: 50px;
+  background-color: #b3e3ff;
+}
+
+#Search {
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+}
+
+textarea {
+  margin: 5px;
+  width: 150px;
+  height: 19px;
+  resize: none;
+  font-size: medium;
+  border-radius: 50px;
+}
