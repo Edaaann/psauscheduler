@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #b3e3ff;
-    color: #333;
+    color: #020202;
   }
 
 
@@ -17,10 +17,57 @@ header {
   }
 
 
+.icons {
+  display: flex;
+}
+
+
+.Home, .Favorite, .Notifications {
+  font-size: 20px;
+  background: none;
+  border: none;
+}
+
+
+.Home, .Favorite, .Notifications, .Sign {
+  margin: 3px;
+  padding: 3px;
+  align-items: center;
+}
+
+
+.Sign {
+  border: blue;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+}
+
+
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+
+#by {
+  margin: 5px;
+}
+
+
+#options {
+  size: 5px;
+}
+
+
+textarea {
+  margin: 5px;
 }
 
 
