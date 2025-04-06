@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Scheduler</title>
-    <link rel="stylesheet" href="Website.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <header>  
     <div>College of Information Technology</div>
-    <div>
-        <button>Home</button>
-        <button>Favorite</button>
-        <button>Notifications</button>
+    <div class="icons">
+        <button class="Home"><i class="fa fa-home"></i></button>
+        <button class="Favorite"><i class="fa fa-star"></i></button>
+        <button class="Notifications"><i class="fa fa-bell"></i></button>
         <div>
-            <button>Sign In</button>
+            <button class="Sign">Sign In</button>
         </div>
     </div>
     </header>
 
 
     <div class="search">
-        <p>Search by:</p>
-        <select>
+        <p id="by">Search By:</p>
+        <select id="options">
             <option>Professor Name</option>
             <option>Subject</option>
             <option>Year</option>
