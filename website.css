@@ -1,5 +1,5 @@
 * {
-  margin: 2px;
+  margin: 0;
   padding: 0;
 }
 
@@ -17,6 +17,11 @@ body {
 .logo {
   max-width: 40px;
   padding: 10px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: rgb(247, 241, 241);
 }
 
 header {
