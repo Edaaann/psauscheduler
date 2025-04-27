@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects List</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="subjects.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <header> 
+        <div class="header">
+            <a href="index.html">
+            <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
+            <h3>College of Information Technology</h3></a>
+        </div>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><i class="material-icons md-36">close</i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="professors.html">Professor/Instructor Name List</a></li>
+            <li><a href="#">Subjects List</a></li>
+            <li><a href="#">Request Form</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
+            <li class="hideOnMobile"><a href="#"><i class="material-icons md-36">notifications</i></a></li>
+            <li onclick=showSidebar()><a href="#"><i class="material-icons md-36">menu</i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <selection class="Subjects">
+        <div class="year" id="1st">
+            <a href="#"><i class="material-icons md-35">looks_one</i></a>
+            <ul>
+                <li>CC101</li>
+                <li>CC102</li>
+                <li>HC101</li>
+                <li>MATHPREP</li>
+                <li>GE-UTS</li>
+                <li>GE-MMW</li>
+                <li>KOMFIL</li>
+                <li>PATHFIT 1</li>
+                <li>GE-ETHICS</li>
+                <li>NSTP 1</li>
+            </ul>
+        </div>
+            <div class="year" id="2nd"><i class="material-icons md-35">looks_two</i></a>
+            <ul>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+            </ul>
+        </div>
+            <div class="year" id="3rd"><i class="material-icons md-35">looks_3</i></a>
+            <ul>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+            </ul>
+        </div>
+            <div class="year" id="4th"><i class="material-icons md-35">looks_4</i></a>
+            <ul>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+                <li>Subject</li>
+            </ul>
+        </div>
+    </selection>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+    
+        }
+    </script>
+
+</body>
+</html>
