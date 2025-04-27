@@ -3,29 +3,65 @@
     padding: 0;
 }
 
-.Profiles {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+body {
     align-items: center;
+    justify-content: center;
 }
 
-table {
-    background-color: white;
-    padding: 10px;
-    margin: 2%;
-    border-style: solid;
-    border-color: black;
-    border-radius: 15%;
-    border-width: 2px;
-}
-  
-ul li {
-    list-style: none;
+.Profiles {
+    font-family: 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 1000px) {
-    .Profiles {
+.Profiles div{
+    background-color: #3399ff2a;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20%;
+        align-items: center;
+    justify-content: center;
+    
+    a {
+        color: black;
+    }
+}
+
+.Profiles div:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.692);
+}
+
+.material-icons.md-37 {
+    color: black;
+    font-size: 200px;
+    align-items: left;
+    justify-content: flex-end;
+}
+
+div a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.nested {
+    display: flex;
+    flex: row;
+}
+
+@media (max-width: 1200px) {
+    .nested {
       flex-direction: column;
     }
-  }
+    .Profiles {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .Profiles {
+        grid-template-columns: 1fr;
+    }
+}
