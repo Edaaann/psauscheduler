@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subjects List</title>
-    <link rel="stylesheet" href="website.css">
-    <link rel="stylesheet" href="subjects.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSIT Curriculum Subjects</title>
+  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="subjects.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <header> 
+    <header>
         <div class="header">
             <a href="index.html">
             <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
             <h3>College of Information Technology</h3></a>
         </div>
 
+
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><i class="material-icons md-36">close</i></a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="professors.html">Professor/Instructor Name List</a></li>
-            <li><a href="#">Subjects List</a></li>
-            <li><a href="#">Request Form</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="subjects.html">Subjects List</a></li>
+            <li><a href="form.html">Request Form</a></li>
+            <li><a href="updates.html">Announcements and Updates</a></li>
+            <li><a href="about.html">About and FAQs</a></li>
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
@@ -34,68 +34,99 @@
         </ul>
     </nav>
     </header>
+    <div class="curriculum-wrapper">
+        <h1>BSIT Curriculum</h1>
+        <label for="subject-dropdown" class="subject-label">Select a Subject:</label>
+        <select name="subjects" id="subject-dropdown">
+        <!-- 1st Year -->
+        <optgroup label="1ST YEAR - 1ST SEMESTER (BSIT)">
+            <option value="CC101">CC101 - Introduction to Computing</option>
+            <option value="CC102">CC102 - Computer Programming 1</option>
+            <option value="HCI101">HCI101 - Introduction to Human Computer Interaction</option>
+            <option value="MATH-PREP">MATH-PREP - Pre Calculus</option>
+            <option value="GE-UTS">GE-UTS - Understanding the Self</option>
+            <option value="GE-MMW">GE-MMW - Mathematics in the Modern World</option>
+            <option value="KomFil">KomFil - Kontekswalisadong Komunikasyon sa Filipino</option>
+            <option value="PATHFIT1">PATHFIT 1 - Movement Competency Training</option>
+            <option value="GE-E">GE-E - Ethics</option>
+            <option value="NSTP1">NSTP 1 - Basic Army Science / CWTS</option>
+          </optgroup>
 
-    <selection class="Subjects">
-        <div class="year" id="1st">
-            <a href="#"><i class="material-icons md-35">looks_one</i></a>
-            <ul>
-                <li>CC101</li>
-                <li>CC102</li>
-                <li>HC101</li>
-                <li>MATHPREP</li>
-                <li>GE-UTS</li>
-                <li>GE-MMW</li>
-                <li>KOMFIL</li>
-                <li>PATHFIT 1</li>
-                <li>GE-ETHICS</li>
-                <li>NSTP 1</li>
-            </ul>
-        </div>
-            <div class="year" id="2nd"><i class="material-icons md-35">looks_two</i></a>
-            <ul>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-            </ul>
-        </div>
-            <div class="year" id="3rd"><i class="material-icons md-35">looks_3</i></a>
-            <ul>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-            </ul>
-        </div>
-            <div class="year" id="4th"><i class="material-icons md-35">looks_4</i></a>
-            <ul>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-                <li>Subject</li>
-            </ul>
-        </div>
-    </selection>
 
-    <script>
+          <!-- 2nd Year -->
+          <optgroup label="1ST YEAR - 2ND SEMESTER (BSIT)">
+            <option value="MS101">MS101 - Discrete Mathematics</option>
+            <option value="CC103">CC103 - Computer Programming 2</option>
+            <option value="WS101">WS101 - Web Systems and Technologies 1</option>
+            <option value="GE-ELEC-MST">GE-ELEC MST - Living in the IT Era</option>
+            <option value="GE-RPH">GE-RPH - Readings in Philippine History</option>
+            <option value="GE-PC">GE-PC - Purposive Communications</option>
+            <option value="PATHFIT2">PATHFIT 2 - Exercise-based Training</option>
+            <option value="GE-VE">GE-VE - Values Education</option>
+            <option value="FilDis">FilDis - Filipino sa iba't ibang Disiplina</option>
+            <option value="NSTP2">NSTP 2 - ROTC / CWTS</option>
+          </optgroup>
+   
+        <!-- 3rd Year -->
+        <optgroup label="3RD YEAR - 1ST SEMESTER (BSIT)">
+          <option value="IM101">IM101 - Advanced Database Systems</option>
+          <option value="NET102">NET102 - Networking 2</option>
+          <option value="SIA101">SIA101 - Systems Integration and Arch 1</option>
+          <option value="GV101">GV101 - Graphics and Visual Computing</option>
+          <option value="PF102">PF102 - Event Driven Programming</option>
+          <option value="SAD">SAD - Systems Analysis and Design</option>
+          <option value="GE-ELEC">GE-ELEC SSP - Gender and Society</option>
+        </optgroup>
+   
+        <optgroup label="3RD YEAR - 2ND SEMESTER (BSIT)">
+          <option value="IAS101">IAS101 - Info Assurance and Security 1</option>
+          <option value="SP101">SP101 - Social Professional Issues 1</option>
+          <option value="CC106">CC106 - App Dev & Emerging Tech</option>
+          <option value="CAP101">CAP101 - Capstone Project 1</option>
+          <option value="TECHNO">TECHNO - Technopreneurship</option>
+          <option value="GE-RIZAL">GE-RIZAL - Life and Works of Rizal</option>
+        </optgroup>
+   
+        <!-- 4th Year -->
+        <optgroup label="4TH YEAR - 1ST SEMESTER (BSIT)">
+          <option value="CAP102">CAP102 - Capstone Project 2</option>
+          <option value="IAS102">IAS102 - Info Assurance and Security 2</option>
+          <option value="SA101">SA101 - System Admin and Maintenance</option>
+          <option value="SIA102">SIA102 - Systems Integration and Arch 2</option>
+          <option value="SP102">SP102 - Social and Professional Issues 2</option>
+        </optgroup>
+   
+        <optgroup label="4TH YEAR - 2ND SEMESTER (BSIT)">
+          <option value="PRAC">PRAC - Practicum</option>
+        </optgroup>
+      </select>
+
+
+    <!-- 1st Year -->
+      <div id="CC101" class="details">
+        <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
+        <strong>Professor/Instructor:</strong> Ms. Jackilyn B. Baccay
+      </div>
+
+
+      <div id="CC101" class="details">
+        <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
+        <strong>Professor/Instructor:</strong> Ms. Thelma D. Miranda
+      </div>
+
+
+      <div id="CC102" class="details">
+        <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
+        <strong>Professor/Instructor:</strong> Mr. Erl Xander G. Labung
+      </div>
+
+
+    <div class="footer">
+        <p>© 2025 Student Scheduler - All Rights Reserved.</p>
+    </div>
+
+
+  <script>
         function showSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
@@ -103,9 +134,21 @@
         function hideSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
-    
+   
         }
-    </script>
 
+
+    const selector = document.getElementById("subject-dropdown");
+    const detailBoxes = document.querySelectorAll(".details");
+
+
+    selector.addEventListener("change", function() {
+      detailBoxes.forEach(box => box.classList.remove("active"));
+      const selected = this.value;
+      if (selected) {
+        document.getElementById(selected).classList.add("active");
+      }
+    });
+  </script>
 </body>
 </html>
