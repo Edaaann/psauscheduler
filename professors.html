@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <header> 
+    <header>
         <div class="header">
             <a href="index.html">
             <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
             <h3>College of Information Technology</h3></a>
         </div>
+
 
     <nav>
         <ul class="sidebar">
@@ -22,80 +23,64 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="professors.html">Professor/Instructor Name List</a></li>
             <li><a href="subjects.html">Subjects List</a></li>
-            <li><a href="#">Request Form</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="form.html">Request Form</a></li>
+            <li><a href="updates.html">Announcements and Updates</a></li>
+            <li><a href="about.html">About and FAQs</a></li>
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
-            <li class="hideOnMobile"><a href="#"><i class="material-icons md-36">notifications</i></a></li>
+            <li class="hideOnMobile"><a href=""><i class="material-icons md-36">notifications</i></a></li>
             <li onclick=showSidebar()><a href="#"><i class="material-icons md-36">menu</i></a></li>
         </ul>
     </nav>
     </header>
 
-    <selection class="Profiles">
-        <div class="nested" id="prof1">
-            <p><i class="material-icons md-37">person</i></p>
-            <p>
-                <ul>
-                    <li><a href="#">Name</a></li>
-                    <li>Handled Section/s: </li>
-                    <li><a href="#">Handled Subject/s: </a></li>
-                    <li><a href="#">School Calendar</a></li>
-                </ul>
-            </p>
+
+    <h2 class="year-label">1st Year Instructors</h2>
+    <div class="container-list">
+        <div class="card">
+            <h3>Ayson, Marvin B.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1B, BSIT-1C</p>
+            <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
+            <p><span class="label">School Calendar:</span> 2024 - 2025</p>
+          </div>
         </div>
 
-        <div class="nested" id="prof2">
-            <p><i class="material-icons md-37">person</i></p>
-            <p>
-                <ul>
-                    <li><a href="#">Name</a></li>
-                    <li>Handled Section/s: </li>
-                    <li><a href="#">Handled Subject/s: </a></li>
-                    <li><a href="#">School Calendar</a></li>
-                </ul>
-            </p>
-        </div>
 
-        <div class="nested" id="prof3">
-            <p><i class="material-icons md-37">person</i></p>
-            <p>
-                <ul>
-                    <li><a href="#">Name</a></li>
-                    <li>Handled Section/s: </li>
-                    <li><a href="#">Handled Subject/s: </a></li>
-                    <li><a href="#">School Calendar</a></li>
-                </ul>
-            </p>
+    <div class="container-list">
+    <div class="card">
+            <h3>Baccay, Jackilyn B.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1C, BSIT-1D, BSIT-1E, BSIT-1F</p>
+            <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
+            <p><span class="label">School Calendar:</span> 2024 - 2025</p>
+          </div>
         </div>
+ 
+    <h2 class="year-label">2nd Year Instructors</h2>
+    <div class="container-list">
+      <!-- Add 2nd Year Professors here -->
+    </div>
+ 
+    <h2 class="year-label">3rd Year Instructors</h2>
+    <div class="container-list">
+      <div class="card">
+        <h3>Ayson, Marvin B.</h3>
+        <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1B, BSIT-1C</p>
+        <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
+        <p><span class="label">School Calendar:</span> 2024 - 2025</p>
+      </div>
+    </div>
+ 
+    <h2 class="year-label">4th Year Instructors</h2>
+    <div class="container-list">
+      <!-- Add 4th Year Professors here -->
+    </div>
 
-        <div class="nested" id="prof4">
-            <p><i class="material-icons md-37">person</i></p>
-            <p>
-                <ul>
-                    <li><a href="#">Name</a></li>
-                    <li>Handled Section/s: </li>
-                    <li><a href="#">Handled Subject/s: </a></li>
-                    <li><a href="#">School Calendar</a></li>
-                </ul>
-            </p>
-        </div>
 
-        <div class="nested" id="prof1">
-            <p><i class="material-icons md-37">person</i></p>
-            <p>
-                <ul>
-                    <li><a href="#">Name</a></li>
-                    <li>Handled Section/s: </li>
-                    <li><a href="#">Handled Subject/s: </a></li>
-                    <li><a href="#">School Calendar</a></li>
-                </ul>
-            </p>
-        </div>
+    <div class="footer">
+        <p>© 2025 Student Scheduler - All Rights Reserved.</p>
+    </div>
 
-    </selection>
 
     <script>
         function showSidebar(){
@@ -105,7 +90,7 @@
         function hideSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
-    
+   
         }
     </script>
 </body>
