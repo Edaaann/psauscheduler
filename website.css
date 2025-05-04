@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -12,19 +13,24 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100vh;
 }
 
+
 /*Start of Navigation CSS*/
+
 
 .logo {
   max-width: 40px;
   padding: 10px;
 }
 
+
 header a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   color: rgb(247, 241, 241);
 }
+
 
 header {
   font-family: Georgia, serif;
@@ -35,14 +41,17 @@ header {
   color: rgb(247, 241, 241);
 }
 
+
 .header {
   width: 100%;
   background-color: linear-gradient(to left, #3399ff 2%, #000066 65%);
 }
 
+
 .header img {
   float: left;
 }
+
 
 .header h3 {
   position: relative;
@@ -50,10 +59,12 @@ header {
   left: 10px;
 }
 
+
 nav {
   font-family: Tahoma, sans-serif;
   font-size: large;
 }
+
 
 nav ul {
   width: 100%;
@@ -63,9 +74,11 @@ nav ul {
   align-items: center;
 }
 
+
 nav li {
   height: 50px;
 }
+
 
 nav a {
   height: 100%;
@@ -76,21 +89,25 @@ nav a {
   color:  white;
 }
 
+
 nav a:hover {
   background-color: #e9dede;
 }
+
 
 nav li:first-child {
   margin-right: auto;
 }
 
-.material-icons.md-36 { 
+
+.material-icons.md-36 {
   color: rgb(247, 241, 241);
-  font-size: 30px; 
+  font-size: 30px;
   left: 40%;
   align-items: left;
   justify-content: flex-end;
 }
+
 
 .sidebar {
   position: fixed;
@@ -99,7 +116,7 @@ nav li:first-child {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background-color: #3399ff28;
+  background-color: #3399ff80;
   backdrop-filter: blur(15px);
   display: none;
   flex-direction: column;
@@ -107,13 +124,16 @@ nav li:first-child {
   justify-content: flex-start;
 }
 
+
 sidebar li, sidebar a {
   width: 100%;
 }
 
+
 .menu-button {
   display: none;
 }
+
 
 @media(max-width: 800px){
   .hideOnMobile{
@@ -121,61 +141,16 @@ sidebar li, sidebar a {
   }
 }
 
+
 @media(max-width: 400px){
   .sidebar{
     width: 100%;
   }
 }
 
+
 /*End of Navigation CSS*/
 
-/*Start of Search Engine CSS*/
-
-.search-engine {
-  width: 100%;
-  padding: 2%;
-  align-items: center;
-  justify-items: center;
-}
-
-.search-bar {
-  width: 100%;
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  border-radius: 60px;
-  padding: 10px 20px;
-}
-
-.search-bar input {
-  background: transparent;
-  flex: 1;
-  border: 0;
-  outline: none;
-  padding: 24px 20px;
-  font-size: 20px;
-  color: #fcfcfc;
-  backdrop-filter: blur(px);
-}
-
-::placeholder {
-  color: #3399ff62;
-}
-
-.search-bar button {
-  border: 0;
-  border-radius: 25%;
-  width: 75px;
-  height: 40px;
-  background-color: #000066ad;
-  color: white;
-  font-size: medium;
-  cursor: pointer;
-}
-
-/*End of Engine CSS*/
 
 /*Start of Wrapper CSS*/
 .wrapper {
@@ -183,17 +158,21 @@ sidebar li, sidebar a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
+
 
 div ul {
   list-style: none;
 }
+
 
 #professors, #subjects, #calendar, #form{
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
+
 
 .dropdown-content {
   display: none;
@@ -209,9 +188,11 @@ div ul {
   border-radius: 10%;
 }
 
+
 #professors:hover .dropdown-content, #subjects:hover .dropdown-content, #calendar:hover .dropdown-content, #form:hover .dropdown-content{
   display: block;
 }
+
 
 .material-icons.md-35 {
   color: rgba(255, 255, 255, 0.966);
@@ -227,13 +208,17 @@ div ul {
 }
 
 
+
+
 @media (max-width: 1000px) {
   .wrapper {
     flex-direction: column;
   }
 }
 
+
 /*Start of Footer CSS*/
+
 
 .footer {
 position: fixed;
