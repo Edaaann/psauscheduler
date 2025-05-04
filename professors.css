@@ -1,67 +1,79 @@
 * {
     margin: 0;
     padding: 0;
-}
+  }
+
 
 body {
     align-items: center;
     justify-content: center;
 }
 
-.Profiles {
-    font-family: 'Trebuchet MS', sans-serif;
+
+h2.year-label {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #555;
+  }
+
+
+  .container-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-}
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-.Profiles div{
-    background-color: #3399ff2a;
-    padding: 30px;
-    border: 1px solid black;
-    border-radius: 20%;
-        align-items: center;
-    justify-content: center;
-    
-    a {
-        color: black;
-    }
-}
 
-.Profiles div:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.692);
-}
+  .card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    transition: transform 0.2s;
+  }
 
-.material-icons.md-37 {
-    color: black;
-    font-size: 200px;
-    align-items: left;
-    justify-content: flex-end;
-}
 
-div a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-}
+  .card:hover {
+    transform: translateY(-5px);
+  }
 
-.nested {
-    display: flex;
-    flex: row;
-}
+
+  .card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    color: #4a4a4a;
+  }
+
+
+  .card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+
+  .label {
+    font-weight: 600;
+    color: #222;
+  }
+
 
 @media (max-width: 1200px) {
-    .nested {
+    .container-list {
       flex-direction: column;
     }
-    .Profiles {
+    .card {
         grid-template-columns: 1fr 1fr;
     }
 }
 
+
 @media only screen and (max-width: 550px) {
-    .Profiles {
+    .card {
         grid-template-columns: 1fr;
     }
 }
