@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="website.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+
 </head>
 <body>
-    <header> 
+    <header>
         <div class="header">
             <a href="index.html">
             <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
             <h3>College of Information Technology</h3></a>
         </div>
+
 
     <nav>
         <ul class="sidebar">
@@ -22,9 +24,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="professors.html">Professor/Instructor Name List</a></li>
             <li><a href="subjects.html">Subjects List</a></li>
-            <li><a href="#">Request Form</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="form.html">Request Form</a></li>
+            <li><a href="updates.html">Announcements and Updates</a></li>
+            <li><a href="about.html">About and FAQs</a></li>
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
@@ -33,13 +35,6 @@
         </ul>
     </nav>
     </header>
-
-    <div class="search-engine">
-        <form action="index.html" class="search-bar">
-            <input type="text" placeholder="Type here..." name="search">
-            <button type="submit">Search</button>
-        </form>
-    </div>
 
 
     <selection class="wrapper">
@@ -50,12 +45,14 @@
         <div class="dropdown-content">Professors/Instructors List</div>
     </div>
 
+
     <div id="subjects">
         <ul>
         <li><a href="subjects.html"><i class="material-icons md-35">book</i></a></li>
         </ul>
         <div class="dropdown-content">Subject</div>
     </div>
+
 
     <div id="calendar">
         <ul>
@@ -64,13 +61,13 @@
         <div class="dropdown-content">School Calendar</div>
     </div>
 
+
     <div id="form">
         <ul>
         <li><a href="https://forms.gle/xGpCxU7XLrX9sYvp7" alt="forms"><i class="material-icons md-35">assignment</i></a></li>
         </ul>
         <div class="dropdown-content">Request Form</div>
     </div>
-
     </selection>
 
 
@@ -85,8 +82,6 @@
     </div>
 
 
-
-
     <script>
         function showSidebar(){
             const sidebar = document.querySelector('.sidebar')
@@ -95,11 +90,8 @@
         function hideSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
-    
+   
         }
     </script>
 </body>
 </html>
-
-
-
