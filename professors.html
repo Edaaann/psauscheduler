@@ -4,18 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professors Name List</title>
-    <link rel="stylesheet" href="website.css">
-    <link rel="stylesheet" href="professors.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to left, #3399ff 2%, #000066 65%);
+            color: #020202;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /*Start of Navigation CSS*/
+
+        .logo {
+            max-width: 40px;
+            padding: 10px;
+        }
+
+        header a:link, a:visited, a:hover, a:active {
+            text-decoration: none;
+            color: rgb(247, 241, 241);
+        }
+
+        header {
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to left, #3399ff 2%, #000066 65%);
+            color: rgb(247, 241, 241);
+        }
+
+        .header {
+            width: 100%;
+            background-color: linear-gradient(to left, #3399ff 2%, #000066 65%);
+        }
+
+        .header img {
+            float: left;
+        }
+
+        .header h3 {
+            position: relative;
+            top: 18px;
+            left: 10px;
+        }
+
+        nav {
+            font-family: Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        nav ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li {
+            height: 50px;
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color:  white;
+        }
+
+        nav a:hover {
+            background-color: #e9dede;
+        }
+
+        nav li:first-child {
+            margin-right: auto;
+        }
+
+        .material-icons.md-36 { 
+            color: rgb(247, 241, 241);
+            font-size: 30px; 
+            left: 40%;
+            align-items: left;
+            justify-content: flex-end;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: #3399ff80;
+            backdrop-filter: blur(15px);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar li, .sidebar a {
+            width: 100%;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        @media(max-width: 800px){
+            .hideOnMobile{
+                display: none;
+            }
+        }
+
+        @media(max-width: 400px){
+            .sidebar{
+                width: 100%;
+            }
+        }
+
+        /*End of Navigation CSS*/
+
+        /*Start of Professor CSS*/
+        
+        h2.year-label {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            color: #ffffff;
+        }
+
+        .year-label {
+            background-color: #2196F3;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-list {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .container-list > .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 1024px) {
+            .container-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            }
+
+            @media (max-width: 600px) {
+            .container-list {
+                grid-template-columns: 1fr;
+            }
+            }
+
+        /*End of Professor CSS*/
+
+        /*Start of Footer CSS*/
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        /*End of Footer CSS*/
+    </style>
+
 <body>
-    <header>
+    <header> 
         <div class="header">
             <a href="index.html">
             <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
             <h3>College of Information Technology</h3></a>
         </div>
-
 
     <nav>
         <ul class="sidebar">
@@ -24,63 +217,266 @@
             <li><a href="professors.html">Professor/Instructor Name List</a></li>
             <li><a href="subjects.html">Subjects List</a></li>
             <li><a href="form.html">Request Form</a></li>
-            <li><a href="updates.html">Announcements and Updates</a></li>
             <li><a href="about.html">About and FAQs</a></li>
+            <li><a href="programcreator.html">Program Creators</a></li>
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
-            <li class="hideOnMobile"><a href=""><i class="material-icons md-36">notifications</i></a></li>
             <li onclick=showSidebar()><a href="#"><i class="material-icons md-36">menu</i></a></li>
         </ul>
     </nav>
     </header>
 
-
+    <!-- Start of 1st Year-->
     <h2 class="year-label">1st Year Instructors</h2>
     <div class="container-list">
         <div class="card">
             <h3>Ayson, Marvin B.</h3>
             <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1B, BSIT-1C</p>
             <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
-            <p><span class="label">School Calendar:</span> 2024 - 2025</p>
           </div>
-        </div>
 
+        <div class="card">
+            <h3>Dela Cruz, Nathaniel P. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1D, BSIT-1E, BSIT-1F</p>
+            <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
+          </div>
 
-    <div class="container-list">
-    <div class="card">
+     <div class="card">
             <h3>Baccay, Jackilyn B.</h3>
             <p><span class="label">Handled Section/s:</span> BSIT-1C, BSIT-1D, BSIT-1E, BSIT-1F</p>
+            <p><span class="label">Handled Subject/s:</span> Introduction to Computing</p>
+            </div>
+
+    <div class="card">
+            <h3>Gonzales, Louella G. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1E</p>
             <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
-            <p><span class="label">School Calendar:</span> 2024 - 2025</p>
-          </div>
-        </div>
- 
+            </div>
+
+    <div class="card">
+            <h3>Labung, Erl Xander G.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1B, BSIT-1E, BSIT-1F</p>
+            <p><span class="label">Handled Subject/s:</span> Computer Programming 1</p>
+            </div>
+
+    <div class="card">
+            <h3>Miranda, Thelma D.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1A</p>
+            <p><span class="label">Handled Subject/s:</span> Introduction to Computing</p>
+            </div>
+
+    <div class="card">
+            <h3>Muñoz, Gemmarie T.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1C, BSIT-1D</p>
+            <p><span class="label">Handled Subject/s:</span> Computer Programming 1</p>
+            </div>
+    </div>
+
+    <!-- Start of 2nd Year -->
+
     <h2 class="year-label">2nd Year Instructors</h2>
     <div class="container-list">
-      <!-- Add 2nd Year Professors here -->
-    </div>
- 
+        <div class="card">
+            <h3>Galang, Jayson U.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2A, BSIT-2B, BSIT-2C</p>
+            <p><span class="label">Handled Subject/s:</span>Data Structures and Algorithms</p>
+            </div>
+
+        <div class="card">
+            <h3>Lintag, Marsha S.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2E, BSIT-2F, BSIT-2G</p>
+            <p><span class="label">Handled Subject/s:</span>Platform Technologies</p>
+            </div>
+
+        <div class="card">
+             <h3>Miranda, Thelma D.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2A, BSIT-2B, BSIT-2C</p>
+            <p><span class="label">Handled Subject/s:</span>Networking 2</p>
+            </div>
+
+        <div class="card">
+            <h3>Parcher, Jean Bernadette C.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2D, BSIT-2E, BSIT-2F, BSIT-2G</p>
+            <p><span class="label">Handled Subject/s:</span>Advanced Database Systems</p>
+            </div>
+
+        <div class="card">
+            <h3>Pentecostes, Rodel, R.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2A, BSIT-2B, BSIT-2C, BSIT-2D</p>
+            <p><span class="label">Handled Subject/s:</span>Object Oriented Programming</p>
+            </div>
+
+        <div class="card">
+            <h3>Tamo, Gerald Christian M. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2A, BSIT-2B, BSIT-2C </p>
+            <p><span class="label">Handled Subject/s:</span> Platform Technologies </p>
+            </div>
+
+        <div class="card">
+            <h3>Valerio, Aloysius S.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2A, BSIT-2B, BSIT-2C, BSIT-2D</p>
+            <p><span class="label">Handled Subject/s:</span>Information Technology Integration for Agricultural Development</p>
+            </div>
+
+        <div class="card">
+            <h3>Yuzon, Agustin Edmin S.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2F, BSIT-2G</p>
+            <p><span class="label">Handled Subject/s:</span>Object Oriented Programming</p>
+            </div>
+
+        <div class="card">
+            <h3>Galang, Renato C.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-2F, BSIT-2G</p>
+            <p><span class="label">Handled Subject/s:</span>Data Structures and Algorithm</p>
+            </div>
+        </div>
+
+    <!-- Start of 3rd Year -->
+                         
     <h2 class="year-label">3rd Year Instructors</h2>
     <div class="container-list">
       <div class="card">
         <h3>Ayson, Marvin B.</h3>
-        <p><span class="label">Handled Section/s:</span> BSIT-1A, BSIT-1B, BSIT-1C</p>
-        <p><span class="label">Handled Subject/s:</span> Introduction to Human Computer Interactions</p>
-        <p><span class="label">School Calendar:</span> 2024 - 2025</p>
+        <p><span class="label">Handled Section/s:</span> BSIT-3F, BSIT-3G</p>
+        <p><span class="label">Handled Subject/s:</span> System Integration and Architecture 1 </p>
       </div>
-    </div>
+
+        <div class="card">
+          <h3>Baccay, Jackilyn B.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3A</p>
+          <p><span class="label">Handled Subject/s:</span> Social and Professional Issues 2</p>
+        </div>
+
+        <div class="card">
+          <h3>Baltazar Rizza G.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3A, BSIT-3B</p>
+          <p><span class="label">Handled Subject/s:</span> System Integration and Architecture 1 </p>
+        </div>
  
+        <div class="card">
+          <h3>Crisostomo, Melanie A.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3A, BSIT-3D, BSIT-3G</p>
+          <p><span class="label">Handled Subject/s:</span> System Analysis and Design</p>
+        </div>
+
+        <div class="card">
+          <h3>Dela Cruz, Nathaniel P.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3F, BSIT-3G</p>
+          <p><span class="label">Handled Subject/s:</span> Graphics and Visual Computing</p>
+        </div>
+
+        <div class="card">
+          <h3>Galang, Jayson U.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3A, BSIT-3B, BSIT-3C</p>
+          <p><span class="label">Handled Subject/s:</span> Advanced Database Systems</p>
+        </div>
+
+        <div class="card">
+          <h3>Liwanag, Ocirne Jun-jun S.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3A, BSIT-3B, BSIT-3C</p>
+          <p><span class="label">Handled Subject/s:</span> Graphics and Visual Computing</p>
+        </div>
+
+        <div class="card">
+          <h3>Roman, James Bryan T.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3D</p>
+          <p><span class="label">Handled Subject/s:</span> Graphics and Visual Computing</p>
+        </div>
+
+        <div class="card">
+          <h3>Tamo, Gerald Christian M.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3D, BSIT-3E</p>
+          <p><span class="label">Handled Subject/s:</span> Networking 2</p>
+        </div>
+
+        <div class="card">
+          <h3>Yuzon, Agustin Edmin S.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3A, BSIT-3B</p>
+          <p><span class="label">Handled Subject/s:</span> Event Driven Programming</p>
+        </div>
+
+        <div class="card">
+          <h3>Pare, Romana B.</h3>
+          <p><span class="label">Handled Section/s:</span> BSIT-3C, BSIT-3E, BSIT-3F</p>
+          <p><span class="label">Handled Subject/s:</span> System Analysis and Design</p>
+        </div>
+      </div>
+
+    <!-- Start of 4th Year -->
+  
     <h2 class="year-label">4th Year Instructors</h2>
     <div class="container-list">
-      <!-- Add 4th Year Professors here -->
-    </div>
+        <div class="card">
+            <h3>Baltazar, Rizza G.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4C, BSIT-4D, BSIT-4E</p>
+            <p><span class="label">Handled Subject/s:</span> Systems Integration and Architecture 2</p>
+          </div>
 
+        <div class="card">
+            <h3>Crisostomo, Melanie A.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4B, BSIT-4C</p>
+            <p><span class="label">Handled Subject/s:</span> Information Systems and Security 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Gonzales, Louella G.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4A</p>
+            <p><span class="label">Handled Subject/s:</span> Information Systems and Security 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Lintag, Marsha S.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4D</p>
+            <p><span class="label">Handled Subject/s:</span> Social and Professional Issues 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Liwanag, Ocirne Jun-Jun B. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4D, BSIT-4E</p>
+            <p><span class="label">Handled Subject/s:</span> Information Systems and Security 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Miranda, Johnny L. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4A, BSIT-4B, BSIT-4C, BSIT-4D, BSIT-4E</p>
+            <p><span class="label">Handled Subject/s:</span> Information Systems and Security 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Muñoz, Gemmarie T. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4E</p>
+            <p><span class="label">Handled Subject/s:</span> Social and Professional Issues 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Pentecostes, Rodel R. </h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4C</p>
+            <p><span class="label">Handled Subject/s:</span> Social and Professional Issues 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Roman, James Bryan T.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4A, BSIT-4B, BSIT-4C, BSIT-4D</p>
+            <p><span class="label">Handled Subject/s:</span> Systems Administration and Maintenance</p>
+          </div>
+
+        <div class="card">
+            <h3>Valerio, Aloysius S.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4A, BSIT-4B</p>
+            <p><span class="label">Handled Subject/s:</span> Systems Integration and Architecture 2</p>
+          </div>
+
+        <div class="card">
+            <h3>Galang, Renato C.</h3>
+            <p><span class="label">Handled Section/s:</span> BSIT-4B</p>
+            <p><span class="label">Handled Subject/s:</span> Social and Professional Issues 2</p>
+          </div>
+        </div>
 
     <div class="footer">
         <p>© 2025 Student Scheduler - All Rights Reserved.</p>
     </div>
-
 
     <script>
         function showSidebar(){
@@ -90,7 +486,7 @@
         function hideSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
-   
+    
         }
     </script>
 </body>
