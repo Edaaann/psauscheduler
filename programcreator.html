@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Program Creators</title>
+  <style>
+      * {
+            margin: 0;
+            padding: 0;
+      }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      height: 100vh;
+      background: #005aea9f;
+      color: #4b2e83;
+    }
+    
+
+    .header {
+      background: linear-gradient(to bottom, #00c6fb, #005bea, #002f6c);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-bottom: 5px dotted #005bea;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      border: 2px dashed #c0ddff;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card-body h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.5rem;
+      color: #69c3ff;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    a {
+      position: fixed;
+      left: 0;
+      font-size: larger;
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🧜 Meet the Mermaids 🧜</h1>
+  <p>Passionate minds behind the sea 🌊</p>
+</div>
+
+<main class="container">
+  <div class="card">
+    <img src="eljohn.png" alt="Creator 1">
+    <div class="card-body">
+      <h3>Dandan, Eljohn Fabio T.</h3>
+      <p>Lead Developer & Debugger 💻<br>Loves clean code and greens🌴!</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="curt.png" alt="Creator 2">
+    <div class="card-body">
+      <h3>Olalia, Curt Ashly D.</h3> 
+      <p>UI Designer🎨🖌️<br>Creates another world for the mermaid kingdom🪼!</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="alley.png" alt="Creator 3">
+    <div class="card-body">
+      <h3>Santos, Allelie Faith P.</h3>
+      <p>Backend Specialist 🔧🛠️<br>Collects date with a sprinkle of pink glitter🫧!</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="marlie.png" alt="Creator 4">
+    <div class="card-body">
+      <h3>Tolentino, Marlie B.</h3>
+      <p>Project Manager & Lead Developer 🗂️💻<br>Builds systems as solid as their favorite coral🐚!</p>
+    </div>
+  </div>
+</main>
+
+  <p><a href="index.html">Click here to go back to the main page!</a></p>
+
+<footer>
+  <p>© 2025 Student Scheduler - All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
