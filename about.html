@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left, #3399ff 0%, #000066 65%);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+        /*Start of Navigation CSS*/
+
+        .logo {
+            max-width: 40px;
+            padding: 10px;
+        }
+
+        header a:link, a:visited, a:hover, a:active {
+            text-decoration: none;
+            color: rgb(247, 241, 241);
+        }
+
+        header {
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to left, #3399ff 2%, #000066 65%);
+            color: rgb(247, 241, 241);
+        }
+
+        .header {
+            width: 100%;
+            background-color: linear-gradient(to left, #3399ff 2%, #000066 65%);
+        }
+
+        .header img {
+            float: left;
+        }
+
+        .header h3 {
+            position: relative;
+            top: 18px;
+            left: 10px;
+        }
+
+        nav {
+            font-family: Tahoma, sans-serif;
+            font-size: large;
+        }
+
+        nav ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li {
+            height: 50px;
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color:  white;
+        }
+
+        nav a:hover {
+            background-color: #e9dede;
+        }
+
+        nav li:first-child {
+            margin-right: auto;
+        }
+
+        .material-icons.md-36 { 
+            color: rgb(247, 241, 241);
+            font-size: 30px; 
+            left: 40%;
+            align-items: left;
+            justify-content: flex-end;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: #3399ff80;
+            backdrop-filter: blur(15px);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        sidebar li, sidebar a {
+            width: 100%;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        @media(max-width: 800px){
+            .hideOnMobile{
+                display: none;
+            }
+        }
+
+        @media(max-width: 400px){
+            .sidebar{
+                width: 100%;
+            }
+        }
+
+        /*End of Navigation CSS*/
+    
+    /*Start of About CSS*/
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+
+    .profile, .about, .contact, .faq {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    .profile {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+    }
+
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
+
+
+    .about, .faq-content {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+
+    .contact {
+      text-align: center;
+    }
+
+
+    .contact a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+
+    .contact a:hover {
+      color: #d1d1ff;
+    }
+
+
+    .faq {
+      margin-top: 60px;
+    }
+
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+
+    .faq-item {
+      margin-bottom: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+
+    .faq-question {
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+
+    .faq-answer {
+      padding: 15px 20px;
+      display: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+
+      .about {
+        font-size: 1rem;
+      }
+
+
+      .profile img {
+        width: 120px;
+        height: 120px;
+      }
+
+
+      .faq h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /*End of About CSS*/
+
+    /*Start of Footer CSS*/
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+      }
+
+    /*End of Footer CSS*/
+  </style>
+</head>
+<body>
+  <header> 
+    <div class="header">
+        <a href="index.html">
+        <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
+        <h3>About Student Scheduler</h3></a>
+    </div>
+
+<nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><i class="material-icons md-36">close</i></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professors.html">Professor/Instructor Name List</a></li>
+        <li><a href="subjects.html">Subjects List</a></li>
+        <li><a href="form.html">Request Form</a></li>
+        <li><a href="about.html">About and FAQs</a></li>
+        <li><a href="programcreator.html">Program Creators</a></li>
+    </ul>
+    <ul>
+        <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
+        <li onclick=showSidebar()><a href="#"><i class="material-icons md-36">menu</i></a></li>
+    </ul>
+</nav>
+</header>
+
+  <div class="container">
+    <div class="profile animate-on-scroll">
+      <img src="profile picture.jpg" alt="Profile Picture" />
+      <h1>About Us</h1>
+    </div>
+
+
+    <div class="about animate-on-scroll">
+      <p>
+        This website is created to help you make a schedule and to check the Professors' schedule.
+      </p>
+    </div>
+
+
+    <div class="contact animate-on-scroll">
+      <p>Contact Us:</p>
+      <a href="acespsau@gmail.com">Email</a>
+      <a href="https://psau.edu.ph/">Our Main Website</a>
+    </div>
+
+
+    <div class="faq animate-on-scroll">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-content">
+        <div class="faq-item">
+          <div class="faq-question">How to create a schedule?</div>
+          <div class="faq-answer">You may create an appointment by filling up the <a href="form.html">form</a> after you choose your schedule at our <a href="calendar.html">schedule section</a></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What time can we contact you?  </div>
+          <div class="faq-answer">You may contact us anytime and we'll respond within 6 to 12 hours. </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Will our schedule be approved right away? </div>
+          <div class="faq-answer">We need to have the Professor check the schedule you made first and have it approve with 48 to 72 hours or 2 to 3 days. </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="footer">
+        <p>© 2025 Student Scheduler - All Rights Reserved.</p>
+    </div>
+
+  <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
