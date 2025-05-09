@@ -1,27 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BSIT Curriculum Subjects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Program Creators</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to left, #3399ff 2%, #000066 65%);
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      height: 100vh;
+      background: #005aea9f;
+      color: #4b2e83;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #00c6fb, #005bea, #002f6c);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-bottom: 5px dotted #005bea;
+      align-items: center;
+      justify-items: center;
+    }
+    
+    
+    .material-icons.md-36 { 
+            color: rgb(247, 241, 241);
+            font-size: 30px; 
+            position: fixed;
+            align-items: left;
+            justify-content: flex-end;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
             align-items: center;
-            justify-content: center;
-        }
+        }  
+    
+      nav p {
+        margin-right: 50px;
+      }
+      
 
-        /*Start of Navigation CSS*/
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        .logo {
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      border: 2px dashed #c0ddff;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card-body h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.5rem;
+      color: #69c3ff;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    a {
+      position: fixed;
+      left: 0;
+      font-size: larger;
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
+
+    .logo {
             max-width: 40px;
             padding: 10px;
         }
@@ -55,777 +165,67 @@
             left: 10px;
         }
 
-        nav {
-            font-family: Tahoma, sans-serif;
-            font-size: large;
-        }
-
-        nav ul {
-            width: 100%;
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        nav li {
-            height: 50px;
-        }
-
-        nav a {
-            height: 100%;
-            padding: 0 10px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            color:  white;
-        }
-
-        nav a:hover {
-            background-color: #e9dede;
-        }
-
-        nav li:first-child {
-            margin-right: auto;
-        }
-
-        .material-icons.md-36 { 
-            color: rgb(247, 241, 241);
-            font-size: 30px; 
-            left: 40%;
-            align-items: left;
-            justify-content: flex-end;
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            width: 250px;
-            z-index: 999;
-            background-color: #3399ff80;
-            backdrop-filter: blur(15px);
-            display: none;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
-        .sidebar li, .sidebar a {
-            width: 100%;
-        }
-
-        .menu-button {
-            display: none;
-        }
-
-        @media(max-width: 800px){
-            .hideOnMobile{
-                display: none;
-            }
-        }
-
-        @media(max-width: 400px){
-            .sidebar{
-                width: 100%;
-            }
-        }
-
-        /*End of Navigation CSS*/
-
-        /*Start of Subject CSS*/
-
-        .curriculum-wrapper {
-          background-color: white;
-          padding: 40px;
-          border-radius: 20px;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-          width: 100%;
-          max-width: 600px;
-          text-align: center;
-          margin: auto;
-          margin-top: 20px;
-        }
-
-
-        h1 {
-          color: #509ef3;
-          margin-bottom: 20px;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color:#19172b;
-        }
-
-
-        .subject-label {
-          font-size: 18px;
-          font-weight: 600;
-          margin-bottom: 10px;
-          display: block;
-          color: #333;
-        }
-
-
-        #subject-dropdown {
-          padding: 15px;
-          border-radius: 30px;
-          border: none;
-          background-color: #f0f0f0;
-          font-size: 16px;
-          width: 100%;
-          box-sizing: border-box;
-          outline: none;
-          transition: box-shadow 0.3s ease;
-          padding: 8px;
-          font-size: 1rem;
-          margin-bottom: 10px;
-        }
-
-
-        #subject-dropdown:focus {
-          box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
-        }
-
-
-        .semester-group option {
-          background-color: #007BFF;
-          color: white;
-          padding: 10px;
-        }
-
-
-        .semester-group {
-          font-weight: bold;
-        }
-
-
-        .info-grid {
-          display: none;
-          margin-top: 30px;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 15px;
-          text-align: center;
-          background-color: #f9f9f9;
-          padding: 20px;
-          border-radius: 10px;
-        }
-
-
-        .info-item {
-          background-color: #fff;
-          padding: 15px;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-
-        @media (max-width: 600px) {
-          .curriculum-wrapper { 
-            padding: 0px;
-          }
-
-
-          h1 {
-            font-size: 24px;
-          }
-
-
-          .subject-label {
-            font-size: 16px;
-          }
-
-
-          #subject-dropdown {
-            font-size: 14px;
-            padding: 10px;
-          }
-
-
-          .info-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-
-
-        .details {
-          display: none;
-          margin-top: 10px;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-          background-color: #f9f9f9;
-        }
-
-
-        .details.active {
-          display: block;
-        }
-
-        @media (max-width: 768px) {
-          .curriculum-wrapper {
-            grid-template-columns: 1fr;
-        }
-      }
-
-      /*End of Subject CSS*/
-
-      /*Start of Footer CSS*/
-
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            color: white;
-            text-align: center;
-        }
-      /*End of Footer CSS*/
-
-      .platform {
-            color: #ededed;
-        }
-        
-     h2 {
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color:#000066;
-        }
-      
+       
   </style>
 </head>
 <body>
-    <header> 
-        <div class="header">
-            <a href="index.html">
-            <img src="PSAU_logo - Copy.png" alt="Logo" class="logo">
-            <h3>College of Information Technology</h3></a>
-        </div>
 
-    <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><i class="material-icons md-36">close</i></a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="professors.html">Professor/Instructor Name List</a></li>
-            <li><a href="subjects.html">Subjects List</a></li>
-            <li><a href="form.html">Request Form</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="programcreator.html">Contact</a></li>
-        </ul>
-        <ul>
-            <li class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></li>
-            <li onclick=showSidebar()><a href="#"><i class="material-icons md-36">menu</i></a></li>
-        </ul>
-    </nav>
-    </header>
-    <div class="platform">
-      <h2>Meet the Amazing Instructors of Information Technology!</h2>
+<header>
+  <h1>🧜 Meet the Mermaids 🧜</h1>
+  <p>Passionate minds behind the sea 🌊</p>
+
+  <nav>
+    <p class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></p>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="card">
+    <img src="eljohn.png" alt="Creator 1">
+    <div class="card-body">
+      <h3>Dandan, Eljohn Fabio T.</h3>
+      <p>Lead Developer & Debugger 💻<br>Loves clean code and greens🌴!</p>
+    </div>
   </div>
-    <div class="curriculum-wrapper">
-        <h1>BSIT Curriculum</h1>
-        <label for="subject-dropdown" class="subject-label">Select a Subject:</label>
-        <select name="subjects" id="subject-dropdown">
-        <!-- 1st Year -->
-        <optgroup label="1ST YEAR - 1ST SEMESTER (BSIT)">
-            <option value="CC101">CC101 - Introduction to Computing</option>
-            <option value="CC102">CC102 - Computer Programming 1</option>
-            <option value="HCI101">HCI101 - Introduction to Human Computer Interaction</option>
-            <option value="MATH-PREP">MATH-PREP - Pre Calculus</option>
-            <option value="GE-UTS">GE-UTS - Understanding the Self</option>
-            <option value="GE-MMW">GE-MMW - Mathematics in the Modern World</option>
-            <option value="KomFil">KomFil - Kontekswalisadong Komunikasyon sa Filipino</option>
-            <option value="PATHFIT1">PATHFIT 1 - Movement Competency Training</option>
-            <option value="GE-E">GE-E - Ethics</option>
-            <option value="NSTP1">NSTP 1 - Basic Army Science / CWTS</option>
-          </optgroup>
 
-          <optgroup label="1ST YEAR - 2ND SEMESTER (BSIT)">
-            <option value="MS101">MS101 - Discrete Mathematics</option>
-            <option value="CC103">CC103 - Computer Programming 2</option>
-            <option value="WS101">WS101 - Web Systems and Technologies 1</option>
-            <option value="GE-ELEC-MST">GE-ELEC MST - Living in the IT Era</option>
-            <option value="GE-RPH">GE-RPH - Readings in Philippine History</option>
-            <option value="GE-PC">GE-PC - Purposive Communications</option>
-            <option value="PATHFIT2">PATHFIT 2 - Exercise-based Training</option>
-            <option value="GE-VE">GE-VE - Values Education</option>
-            <option value="FilDis">FilDis - Filipino sa iba't ibang Disiplina</option>
-            <option value="NSTP2">NSTP 2 - ROTC / CWTS</option>
-          </optgroup>
+  <div class="card">
+    <img src="curt.png" alt="Creator 2">
+    <div class="card-body">
+      <h3>Olalia, Curt Ashly D.</h3> 
+      <p>UI Designer🎨🖌️<br>Creates another world for the mermaid kingdom🪼!</p>
+    </div>
+  </div>
 
-        <!-- 2nd Year -->
-        <optgroup label="2ND YEAR - 1ST SEMESTER (BSIT)">
-          <option value="CC104">CC104 - Data Structures and Algorithms</option>
-          <option value="PF101">PF101 - Object Oriented Programming</option>
-          <option value="PT101">PT101 - Platforms Technologies</option>
-          <option value="GE-CW">GE-CW - The Contemporary World</option>
-          <option value="GE-AA">GE-AA - Art Appreciation</option>
-          <option value="PATHFIT3">PATHFIT 3 - A Menu of Dance and Sports</option>
-          <option value="ACCTG">ACCTG - Accounting Principles</option>
-          <option value="ITAGRI">IT AGRI - Information Technology Integration for Agriculture</option>
-        </optgroup>
-      
-        <optgroup label="2ND YEAR - 2ND SEMESTER (BSIT)">
-          <option value="CC105">CC105 - Information Management</option>
-          <option value="MS102">MS102 - Quantitative Methods</option>
-          <option value="NET101">NET101 - Networking 1</option>
-          <option value="IPT101">IPT101 - Integrative Programming Technologies</option>
-          <option value="GE-STS">GE-STS - Science Technology and Society</option>
-          <option value="GE-ELEC-AH">GE-ELEC AH - Arts and Humanities (Reading Visual Arts)</option>
-          <option value="WS102">WS102 - Web Systems and Technologies 2</option>
-          <option value="PATHFIT4">PATHFIT 4 - Outdoor Adventure and Group Exercise</option>
-        </optgroup>
+  <div class="card">
+    <img src="alley.png" alt="Creator 3">
+    <div class="card-body">
+      <h3>Santos, Allelie Faith P.</h3>
+      <p>Backend Specialist 🔧🛠️<br>Collects date with a sprinkle of pink glitter🫧!</p>
+    </div>
+  </div>
 
-        <!-- 3rd Year -->
-        <optgroup label="3RD YEAR - 1ST SEMESTER (BSIT)">
-          <option value="IM101">IM101 - Advanced Database Systems</option>
-          <option value="NET102">NET102 - Networking 2</option>
-          <option value="SIA101">SIA101 - Systems Integration and Arch 1</option>
-          <option value="GV101">GV101 - Graphics and Visual Computing</option>
-          <option value="PF102">PF102 - Event Driven Programming</option>
-          <option value="SAD">SAD - Systems Analysis and Design</option>
-          <option value="GE-ELEC-SSP">GE-ELEC SSP - Social Sciences and Philosophy(Gender and Society)</option>
-        </optgroup>
-    
-        <optgroup label="3RD YEAR - 2ND SEMESTER (BSIT)">
-          <option value="IAS101">IAS101 - Info Assurance and Security 1</option>
-          <option value="SP101">SP101 - Social Professional Issues 1</option>
-          <option value="CC106">CC106 - App Dev & Emerging Tech</option>
-          <option value="CAP101">CAP101 - Capstone Project 1</option>
-          <option value="TECHNO">TECHNO - Technopreneurship</option>
-          <option value="GE-RIZAL">GE-RIZAL - Life and Works of Rizal</option>
-        </optgroup>
-    
-        <!-- 4th Year -->
-        <optgroup label="4TH YEAR - 1ST SEMESTER (BSIT)">
-          <option value="CAP102">CAP102 - Capstone Project 2</option>
-          <option value="IAS102">IAS102 - Info Assurance and Security 2</option>
-          <option value="SA101">SA101 - System Admin and Maintenance</option>
-          <option value="SIA102">SIA102 - Systems Integration and Arch 2</option>
-          <option value="SP102">SP102 - Social and Professional Issues 2</option>
-        </optgroup>
-    
-        <optgroup label="4TH YEAR - 2ND SEMESTER (BSIT)">
-          <option value="PRAC">PRAC - Practicum</option>
-        </optgroup>
- 
-      </select>
+  <div class="card">
+    <img src="marlie.png" alt="Creator 4">
+    <div class="card-body">
+      <h3>Tolentino, Marlie B.</h3>
+      <p>Project Manager & Lead Developer 🗂️💻<br>Builds systems as solid as their favorite coral🐚!</p>
+    </div>
+  </div>
+</main>
 
-        <!-- 1st Year -->
-        <div id="CC101" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Jackilyn B. Baccay
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Thelma D. Miranda
-        </div>
+<div class="footer">
+  <p>© 2025 Student Scheduler - All Rights Reserved.</p>
+</div>
 
-        <div id="CC102" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Erl Xander G. Labung
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Gemmarie T. Muñoz
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Melanie Crisostomo
-        </div>
- 
-        <div id="HCI101" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Marvin B. Ayson
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Nathaniel P. Dela Cruz
-        </div>
-  
-        <div id="MATH-PREP" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="GE-UTS" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="GE-MMW" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-        <div id="KomFil" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-       
-        <div id="PATHFIT1" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="GE-E" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-  
-  
-  
-        <div id="NSTP1" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-      <!-- 2nd sem -->
-
-        <div id="MS101" class="details">
-          <strong>Time Slot:</strong> Mon 8:00AM - 2:30PM, Tues 8:00AM - 5:00 PM, Thurs 8:00AM - 4:00PM, Fri 8:00AM - 2:30PM  <br>
-          <strong>Professor/Instructor:</strong> Ms. Jean Bernadette Parcher
-          <hr>
-          <strong>Time Slot:</strong> <br>
-          <strong>Professor/Instructor:</strong> Mr. Rodel R. Pentecostes
-        </div>
-
-        <div id="CC103" class="details">
-          <strong>Time Slot:</strong> Mon 8:30AM - 2:30PM, Tues 11:00AM - 5:00PM, Wed 1:00PM - 5:00PM, Thurs 1:00PM - 3:00PM, Fri 8:00PM - 5:00PM<br>
-          <strong>Professor/Instructor:</strong> Ms. Gemmarie T. Muñoz
-          <hr>
-          <strong>Time Slot:</strong>Mon 7:30AM - 4:00PM, Tues 8:00AM - 9:00AM, Thurs 8:00AM - 10:30AM, Fri 10:00AM - 3:00PM <br>
-          <strong>Professor/Instructor:</strong> Mr. Gerald Christian M. Tamo
-        </div>
-
-        <div id="WS101" class="details">
-          <strong>Time Slot:</strong> Mon 1:00PM - 5:00PM, Tues 8:00AM - 5:00PM, Wed 10:00AM - 5:00PM, Thurs 9:30AM - 2:30PM, Fri 10:00AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Marsha S. Lintag
-          <hr>
-          <strong>Time Slot:</strong>Mon 10:00AM - 12:00 PM, Tues 2:00PM - 4:00PM, Wed 8:00AM - 9:30AM, Thurs 11:00AM - 4:00PM, Fri 3:00PM - 5:00PM<br>
-          <strong>Professor/Instructor:</strong> Mr. Rodel R. Pentecostes<hr>   
-        </div>
-
-        <div id="GE-ELEC-MST" class="details">
-          <strong>Time Slot:</strong> Mon 8:00AM - 4:00PM, Tues 8:00AM - 12:00PM, Wed 8:00AM - 11:00AM, Thurs 8:00AM - 4:30PM, Fri 9:30AM - 2:00PM <br>
-          <strong>Professor/Instructor:</strong> Mr. Aloysius S. Valerio
-        </div>
-  
-        <div id="GE-RPH" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-        <div id="GE-PC" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="PATHFIT2" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-        <div id="GE-VE" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-        <div id="FilDis" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-        <!-- 2nd Year -->
-        <div id="CC104" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Jayson U. Galang
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Renato C. Galang
-        </div>
-
-        <div id="PF101" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Rodel R. Pentecostes
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Agustin Edmin S. Yuzon
-        </div>
-  
-        <div id="PT101" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Marsha S. Lintag
-          <hr>
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Gerald Christian M. Tamo
-        </div>
-
-        <div id="GE-CW" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-       
-        <div id="GE-AA" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="PATHFIT3" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="ACCTG" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-        <div id="ITAGRI" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-
-       <div id="CC105" class="details">
-          <strong>Time Slot:</strong> Mon 9:00AM - 3:00PM, Tues&Wed 9:00AM - 5:00PM, Thurs 1:00PM - 3:00PM, Fri 8:00AM - 2:00PM <br>
-          <strong>Professor/Instructor:</strong> Mr. Renato C. Galang
-          <hr>
-          <strong>Time Slot:</strong> Mon 9:00AM - 4:00P, Tues 10:00AM - 2:00PM, Wed 8:00AM - 12:00PM, Thurs 8:00AM - 11:00AM, Fri 7:00AM - 3:00PM<br>
-          <strong>Professor/Instructor:</strong> Mr. Jayson U. Galang
-        </div>
-  
-  
-  
-  
-        <div id="MS102" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-  
-  
-  
-        <div id="NET101" class="details">
-          <strong>Time Slot:</strong> Mon&Tues 8:00AM - 5:00PM,  Wed 8:00AM - 9:00AM, Thurs 8:00AM - 10:00AM <br>
-          <strong>Professor/Instructor:</strong> Ms. Jackilyn B. Baccay
-          <strong>Time Slot:</strong> Mon 8:00AM - 12:00PM, Tues 1:00PM - 3:00PM, Wed 8:00AM - 5:00PM, Thurs&Fri 1:00PM - 5:00PM <br>
-          <strong>Professor/Instructor:</strong> Ms. Thelma Miranda
-        </div>
-
-        <div id="IPT101" class="details">
-          <strong>Time Slot:</strong> Mon 9:00AM -12:00PM, Tues 8:00AM - 9:00AM, Wed 8:00AM - 10:00AM, Thurs 8:00-9:00AM, 3:00-4:00PM, Fri 7:00AM - 3:00PM<br>
-          <strong>Professor/Instructor:</strong> Ms. Maria Charmaine Estrada
-          <strong>Time Slot:</strong> Mon 1:00PM - 5:00PM, Tues 8:00AM - 5:00PM, Wed 10:00AM - 5:00PM, 8:00AM - 2:00PM<br>
-          <strong>Professor/Instructor:</strong> Mr. Ocirne Jun-Jun S. Liwanag
-        </div>
-  
-        <div id="GE-STS" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong> To be announced
-        </div>
-  
-        <div id="GE-ELEC-AH" class="details">
-          <strong>Time Slot:</strong> Wed 1:00PM - 2:30PM, Fri 1:00PM - 3:00PM <br>
-          <strong>Professor/Instructor:</strong> Mr. Marvin B. Ayson
-          <strong>Time Slot:</strong> Mon 4:00PM - 5:00PM, Tues 3:00PM - 5:00PM <br>
-          <strong>Professor/Instructor:</strong>  Mr. Jayson U. Galang
-          <strong>Time Slot:</strong> Wed 1:00PM - 2:00PM, Thurs 3:00PM - 5:00PM <br>
-          <strong>Professor/Instructor:</strong> Ms. Marsha A. Lintag
-          <strong>Time Slot:</strong> Mon & Thurs 4:00PM - 5:00PM, Tues 9:00AM - 10:00AM<br>
-          <strong>Professor/Instructor:</strong> Ms. Gemmarie T. Muñoz
-          <strong>Time Slot:</strong> Thurs 11:00AM - 12:00PM, Fri 10:00AM - 12:00PM <br>
-          <strong>Professor/Instructor:</strong> Ms. Jean Bernadette Parcher
-          <strong>Time Slot:</strong> Mon 2:00PM - 3:00PM, Wed 9:30 - 11:00AM<br>
-          <strong>Professor/Instructor:</strong> Mr. James Bryan Roman
-          <strong>Time Slot:</strong> Mon 3:00PM - 4:00PM, Tues 10:00AM - 12:00PM<br>
-          <strong>Professor/Instructor:</strong> MR. Agustin Edmin Yuzon
-        </div>
-  
-        <div id="WS102" class="details">
-          <strong>Time Slot:</strong> Mon,Tues&Wed 7:00AM - 12:00PM, Thurs 7:00AM - 4:00PM, Fri 7:00AM - 10:00AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Agustin Edmin S. Yuzon
-          <strong>Time Slot:</strong> Mon 8:00AM - 9:00AM, Tues 9:00AM - 2:30PM, Wed 11:00AM - 2:00PM, Thurs 9:00AM - 3:00PM, Fri 3:00PM- 5:00PM<br>
-          <strong>Professor/Instructor:</strong>  Ms. Maria Charmaine Estrada
-        </div>
-  
-  
-        <div id="PATHFIT4" class="details">
-          <strong>Time Slot:</strong> To be announced<br>
-          <strong>Professor/Instructor:</strong>
-          </div>
-  
-      <!-- 3rd Year -->
-        <div id="IM101" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Jayson U. Galang
-        </div>
-
-        <div id="NET102" class="details">
-          <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-          <strong>Professor/Instructor:</strong> Mr. Gerald Christian M. Tamo
-          </div>
-           
-          <div id="SIA101" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong> Mr. Marvin B. Ayson
-          </div>
-           
-          <div id="GV101" class="details">
-              <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-              <strong>Professor/Instructor:</strong> Mr. Nathaniel P. Delacruz
-              <hr>
-              <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-              <strong>Professor/Instructor:</strong> Mr. James Bryan T. Roman
-          </div>
-
-          <div id="PF102" class="details">
-            <strong>Time Slot:</strong> To be announced <br>
-             <strong>Professor/Instructor:</strong> To be announced
-          </div>
-                       
-          <div id="SAD" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong> Ms. Melanie A. Crisostomo
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong> Mr. Romana B. Pare
-          </div>
-
-          <div id="GE-ELEC-SSP" class="details">
-            <strong>Time Slot:</strong> To be announced<br>
-            <strong>Professor/Instructor:</strong> To be announced
-          </div>
-           
-        <!--second sem-->
-  
-  
-          <div id="IAS101" class="details">
-            <strong>Time Slot:</strong> Mon 10:00AM - 5:00PM, Tues 10:00AM - 12:00AM, 2:00PM - 5:00PM, Wed 11:00Am - 12:00PM, 3:00PM-5:00PM, Thurs 9:00AM - 12:00PM, Fri 10:00AM - 2:00PM <br>
-            <strong>Professor/Instructor:</strong> Mr. Marvin Ayson
-            <hr>
-            <strong>Time Slot:</strong> Mon 1:00PM - 5:00PM, Tues 8:00AM - 9:00AM, 1:00PM - 5:00PM, Wed 3:00PM - 5:00PM, Thurs 10:00AM - 11:00AM, 1:00PM - 2:00PM, 3:00PM - 5:00PM<br>
-            <strong>Professor/Instructor:</strong> Ms. Louella Gonzales
-            </div>
-  
-  
-  
-  
-          <div id="SP101" class="details">
-           <strong>Time Slot:</strong> Mon 8:00AM - 9:00AM, 1:00PM - 5:00PM, Tues 7:30AM - 9:30AM, Wed 11:00AM - 12:00AM, 1:00PM - 5PM, Thurs 1:00PM - 5PM, Fri 7:30AM - 9:30AM, 2:00PM - 5:00PM<br>
-           <strong>Professor/Instructor:</strong>Mr. Nathaniel P. Dela Cruz
-           </div>
-  
-  
-  
-  
-          <div id="CC106" class="details">
-            <strong>Time Slot:</strong> Mon 8:00AM - 12:00AM, Tues 8:00AM - 10:00AM, 1:00PM - 2:00PM, 3:00PM - 5:00PM, Wed 1:00PM - 5:00PM, Thurs 11:00AM - 12:00PM, 3:00PM - 5:00PM, Fri 8:00AM - 12:00PM  <br>
-            <strong>Professor/Instructor:</strong> Mr. James Bryan Roman
-            <hr>
-            <strong>Time Slot:</strong> Mon 1:00PM - 5:00PM, Tues 8:00AM - 12:00PM, Wed 10:00AM - 11:00AM, 1:00PM - 5:00PM, Thurs 8:00AM - 10:00AM  <br>
-            <strong>Professor/Instructor:</strong> Mr. Rodel R. Pentecostes
-          </div>
-  
-  
-  
-  
-          <div id="CAP101" class="details">
-            <strong>Time Slot:</strong> Mon 8:00AM - 11:00AM, 2:00PM - 3:00PM, 4:00PM - 11:00PM, Tues 8:00AM - 9:30AM, 10:00AM - 12:00PM, 1:00PM - 5:00PM, Wed 8:00AM - 9:30AM, 10:00AM - 11:00AM, 12:30PM - 2:30PM, 3:00PM - 4:00PM, Thurs 8:00AM - 11:00AM, 1:30PM - 4:00PM<br>
-            <strong>Professor/Instructor:</strong>Mr. Johny L. Miranda
-          </div>
-           
-          <div id="TECHNO" class="details">
-            <strong>Time Slot:</strong> Mon 8:00AM - 1:00PM, Tues 10:00AM - 5:00PM, Wed 8:00AM - 9:30AM, 11:00AM - 12:00PM, Fri 8:00AM - 12:00PM, 2:00PM - 5:00PM<br>
-            <strong>Professor/Instructor:</strong>Mr. Erl Xander G. Labung
-          </div>
-           
-          <div id="GE-RIZAL" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong> TBA
-          </div>
-  
-  
-  
-  
-          <!-- 4th Year -->
-          <div id="CAP102" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Mr. Johny L. MIranda
-            </div>
-       
-          <div id="IAS102" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms.  Melanie A. Crisostomo
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms. Louella G. Gonzales
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms. Ocirne Junjun S. Liwanag
-            </div>
-           
-          <div id="SA101" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Mr. James T. Bryan
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong> TBA
-           </div>
-                       
-           <div id="SIA102" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Mr. Aloysius S. Valerio
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms. Rizza G. Baltazar
-          </div>
-       
-          <div id="SP102" class="details">
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms. Jackilyn B. Baccay
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms. Marsha S. Lintag
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Ms. Gemmarie T. Muñoz
-            <hr>
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Mr. Rodel R. Pentecostes
-            <strong>Time Slot:</strong> Mon & Wed 9:00AM - 10:30AM<br>
-            <strong>Professor/Instructor:</strong>Mr. Renato C. Galang
-            </div>
-       
-          <div id="GE-RIZAL" class="details">
-            <strong>Time Slot:</strong> To be announced<br>
-            <strong>Professor/Instructor:</strong>To be announced
-          </div>
-       
-          <div id="PRAC" class="details">
-            <strong>Time Slot:</strong>To be announced<br>
-            <strong>Professor/Instructor:</strong> To be announced
-          </div>
-        </div>
-
-      <div class="footer">
-          <p>© 2025 Student Scheduler - All Rights Reserved.</p>
-      </div>  
-
-  <script>
-        function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-    
-        }
-
-    const selector = document.getElementById("subject-dropdown");
-    const detailBoxes = document.querySelectorAll(".details");
-
-    selector.addEventListener("change", function() {
-      detailBoxes.forEach(box => box.classList.remove("active"));
-      const selected = this.value;
-      if (selected) {
-        document.getElementById(selected).classList.add("active");
-      }
-    });
-  </script>
+<script>
+  function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+  }
+</script>
 </body>
 </html>
