@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Program Creators</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
-      * {
-            margin: 0;
-            padding: 0;
-      }
 
     body {
       margin: 0;
@@ -17,23 +14,43 @@
       background: #005aea9f;
       color: #4b2e83;
     }
-    
 
-    .header {
+    header {
       background: linear-gradient(to bottom, #00c6fb, #005bea, #002f6c);
       color: #fff;
       padding: 2rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-bottom: 5px dotted #005bea;
+      align-items: center;
+      justify-items: center;
     }
+    
+    
+    .material-icons.md-36 { 
+            color: rgb(247, 241, 241);
+            font-size: 30px; 
+            position: fixed;
+            align-items: left;
+            justify-content: flex-end;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }  
+    
+      nav p {
+        margin-right: 50px;
+      }
+      
 
     h1 {
       margin: 0;
       font-size: 2.5rem;
     }
 
-    .header p {
+    header p {
       font-style: italic;
       margin-top: 0.5rem;
     }
@@ -113,14 +130,54 @@
     a:active {
       text-decoration: underline;
     }
+
+    .logo {
+            max-width: 40px;
+            padding: 10px;
+        }
+
+        header a:link, a:visited, a:hover, a:active {
+            text-decoration: none;
+            color: rgb(247, 241, 241);
+        }
+
+        header {
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to left, #3399ff 2%, #000066 65%);
+            color: rgb(247, 241, 241);
+        }
+
+        .header {
+            width: 100%;
+            background-color: linear-gradient(to left, #3399ff 2%, #000066 65%);
+        }
+
+        .header img {
+            float: left;
+        }
+
+        .header h3 {
+            position: relative;
+            top: 18px;
+            left: 10px;
+        }
+
+       
   </style>
 </head>
 <body>
 
-<div class="header">
+<header>
   <h1>🧜 Meet the Mermaids 🧜</h1>
   <p>Passionate minds behind the sea 🌊</p>
-</div>
+
+  <nav>
+    <p class="hideOnMobile"><a href="index.html"><i class="material-icons md-36">home</i></a></p>
+  </nav>
+</header>
 
 <main class="container">
   <div class="card">
@@ -156,11 +213,19 @@
   </div>
 </main>
 
-  <p><a href="index.html">Click here to go back to the main page!</a></p>
-
-<footer>
+<div class="footer">
   <p>© 2025 Student Scheduler - All Rights Reserved.</p>
-</footer>
+</div>
 
+<script>
+  function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+  }
+</script>
 </body>
 </html>
